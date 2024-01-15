@@ -1,0 +1,16 @@
+services:
+  server:
+    build: ./server        
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./server:/server
+    command: bash -c "python manage.py runserver 0.0.0.0:8100"
+
+  # web:
+  #   build: ./client
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./client:/client
+
